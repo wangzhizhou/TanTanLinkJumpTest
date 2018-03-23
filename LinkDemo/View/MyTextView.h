@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface MyTextView : UITextView
--(void)setText:(NSString *)text;
 @end

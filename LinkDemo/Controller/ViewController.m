@@ -14,8 +14,9 @@
 <
 UITextViewDelegate
 >
-@property (weak, nonatomic) IBOutlet UISwitch *systemHandleSwitch;
+
 @property (nonatomic, strong) MyTextView *textView;
+
 @end
 
 @implementation ViewController
@@ -48,6 +49,7 @@ UITextViewDelegate
 }
 
 #pragma mark - UITextViewDelegate
+
 -(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction
 {
     if([URL.scheme isEqualToString:@"tantanapp"])

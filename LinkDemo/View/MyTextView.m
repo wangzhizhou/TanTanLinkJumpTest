@@ -10,9 +10,7 @@
 
 @implementation MyTextView
 
-
--(instancetype)init
-{
+-(instancetype)init {
     if(self = [super init])
     {
         self.editable = NO;
@@ -26,12 +24,13 @@
                                          NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
                                          };
         self.linkTextAttributes = linkAttributes;
+        self.dataDetectorTypes = UIDataDetectorTypeLink;
+        self.scrollEnabled = NO;
     }
     return self;
 }
 
--(void)setText:(NSString *)text
-{
+-(void)setText:(NSString *)text {
     NSString *pattern = @"<a.*href\\s*=\\s*\"(.*)\".*>(.*)</a>";
     NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:nil];
     NSArray *matches = [regExp matchesInString:text options:NSMatchingReportProgress range:NSMakeRange(0, text.length)];
@@ -47,8 +46,23 @@
 
     self.attributedText = attributedText;
 }
-- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
-{
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    self.selectedTextRange = nil;
+    [self resignFirstResponder];
     return NO;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self disableLongPressGestures];
+}
+
+- (void)disableLongPressGestures {
+    for(UIGestureRecognizer *gestureRecognizer in self.gestureRecognizers) {
+        if([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]])
+        {
+            gestureRecognizer.enabled = NO;
+        }
+    }
 }
 @end
