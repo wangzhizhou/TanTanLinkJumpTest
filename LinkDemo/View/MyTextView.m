@@ -10,12 +10,12 @@
 
 @implementation MyTextView
 
+
 -(instancetype)init
 {
     if(self = [super init])
     {
         self.editable = NO;
-        self.textAlignment = NSTextAlignmentCenter;
         NSDictionary *linkAttributes = @{
                                          NSForegroundColorAttributeName:
                                              [UIColor blueColor],

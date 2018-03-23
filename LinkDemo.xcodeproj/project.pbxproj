@@ -64,21 +64,45 @@
 		34BF7AC02063A9220017CAAD /* LinkDemo */ = {
 			isa = PBXGroup;
 			children = (
-				34BF7AC12063A9220017CAAD /* AppDelegate.h */,
-				34BF7AC22063A9220017CAAD /* AppDelegate.m */,
+				F38C4A7C20652CE000028518 /* View */,
+				F38C4A7B20652CCF00028518 /* Controller */,
+				F38C4A7D20652D2F00028518 /* supports */,
+			);
+			path = LinkDemo;
+			sourceTree = "<group>";
+		};
+		F38C4A7B20652CCF00028518 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				34BF7AC42063A9220017CAAD /* ViewController.h */,
 				34BF7AC52063A9220017CAAD /* ViewController.m */,
+				34BF7ADA2063BAAE0017CAAD /* TTFeedbackViewController.h */,
+				34BF7ADB2063BAAE0017CAAD /* TTFeedbackViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F38C4A7C20652CE000028518 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34BF7AD72063AAD00017CAAD /* MyTextView.h */,
+				34BF7AD82063AAD00017CAAD /* MyTextView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38C4A7D20652D2F00028518 /* supports */ = {
+			isa = PBXGroup;
+			children = (
+				34BF7AC12063A9220017CAAD /* AppDelegate.h */,
+				34BF7AC22063A9220017CAAD /* AppDelegate.m */,
 				34BF7AC72063A9220017CAAD /* Main.storyboard */,
 				34BF7ACA2063A9220017CAAD /* Assets.xcassets */,
 				34BF7ACC2063A9220017CAAD /* LaunchScreen.storyboard */,
 				34BF7ACF2063A9220017CAAD /* Info.plist */,
 				34BF7AD02063A9220017CAAD /* main.m */,
-				34BF7AD72063AAD00017CAAD /* MyTextView.h */,
-				34BF7AD82063AAD00017CAAD /* MyTextView.m */,
-				34BF7ADA2063BAAE0017CAAD /* TTFeedbackViewController.h */,
-				34BF7ADB2063BAAE0017CAAD /* TTFeedbackViewController.m */,
 			);
-			path = LinkDemo;
+			path = supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +316,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N62934Y28;
-				INFOPLIST_FILE = LinkDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LinkDemo/supports/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joker.LinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,7 +331,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N62934Y28;
-				INFOPLIST_FILE = LinkDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LinkDemo/supports/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joker.LinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
